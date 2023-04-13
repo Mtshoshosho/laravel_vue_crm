@@ -6,6 +6,18 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\InertiaTestController;
 
+// _____CRM Tours開発記述____________________________________________________________________________________
+// itemsテーブルに関するルートの登録
+use App\Http\Controllers\ItemController;
+
+Route::resource('items', ItemController::class)
+->middleware(['auth', 'verified']);
+
+
+
+
+// ________________________________________________________________________________________________________
+
 
 /*
 |--------------------------------------------------------------------------
