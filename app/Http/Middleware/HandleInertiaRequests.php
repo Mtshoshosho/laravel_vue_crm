@@ -41,7 +41,9 @@ class HandleInertiaRequests extends Middleware
             },
             'flash' => [
                 //関数（fn()）を挟むことで、部分リロードを行うこと
-                'message' => fn() => $request->session()->get('message')
+                'message' => fn() => $request->session()->get('message'),
+                // 追記
+                'status' => fn() => $request->session()->get('status')
             ]
         ]);
     }

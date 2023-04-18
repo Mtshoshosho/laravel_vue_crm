@@ -1,6 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
 import { Inertia } from '@inertiajs/inertia'
+import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
 
 defineProps({
     errors: Object
@@ -13,7 +14,7 @@ const form = reactive({
 const submitFunction = () => {
     Inertia.post('/inertia', form)
 }
-</script>
+</script>  
 
 <!-- <script setup>:
 この部分では、Vue.jsの機能とInertia.jsの機能をインポートし、フォームデータと送信処理のロジックを定義しています。
@@ -23,6 +24,9 @@ const form = reactive({ title: null, content: null }): リアクティブなform
 const submitFunction = () => { Inertia.post('/inertia', form) }: フォームの送信処理を行う関数submitFunctionを定義します。この関数は、Inertia.jsのpostメソッドを使って、/inertiaエンドポイントにフォームデータを送信します。 -->
 
 <template>
+    <!-- コンポーネントでまとめて出力 -->
+    <BreezeValidationErrors :errors="errors" />
+    <!-- 一つづつ出力 -->
     <form @submit.prevent="submitFunction">
         <input type="text" name="title" v-model="form.title">{{ form.title }}<br>
         <div v-if="errors.title">{{ errors.title }}</div><br>

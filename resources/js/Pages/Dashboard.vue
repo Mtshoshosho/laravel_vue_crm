@@ -1,9 +1,11 @@
 <script setup>
+// /resources/js/Pages/Dashboard.vueのコピー
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 </script>
 
 <template>
+<!-- /resources/js/Pages/Dashboard.vueのコピー -->
     <Head title="Dashboard" />
 
     <AuthenticatedLayout>
