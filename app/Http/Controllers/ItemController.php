@@ -94,8 +94,7 @@ class ItemController extends Controller
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
-        
-        // フォームに入力された値の編集
+        $item->save();
         //編集前値       編集後値
         $item->name = $request->name;
         $item->memo = $request->memo;

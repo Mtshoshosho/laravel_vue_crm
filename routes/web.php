@@ -14,6 +14,10 @@ Route::resource('items', ItemController::class)
 ->middleware(['auth', 'verified']);
 
 
+use App\Http\Controllers\CustomerController;
+
+Route::resource('customers', CustomerController::class)
+->middleware(['auth', 'verified']);
 
 
 // ________________________________________________________________________________________________________
