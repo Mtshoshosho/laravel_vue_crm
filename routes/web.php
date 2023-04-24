@@ -19,6 +19,9 @@ use App\Http\Controllers\CustomerController;
 Route::resource('customers', CustomerController::class)
 ->middleware(['auth', 'verified']);
 
+use App\Http\Controllers\PurchaseController;
+
+Route::resource('purchases', PurchaseController::class);
 
 // ________________________________________________________________________________________________________
 

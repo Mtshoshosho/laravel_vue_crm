@@ -20,9 +20,9 @@ class UserSeeder extends Seeder
     {
         // 作るダミーデータの情報
         DB::table('users')->insert([
-        'name' => 'test',
-        'email' => 'test@test.com',
-        'password' => Hash::make('password123')
+        'name' => 'ヤマモト',
+        'email' => '1225@gmail.com',
+        'password' => Hash::make('pass1225')
         ]);
     }
 }

@@ -32,6 +32,10 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
+                                <!-- purchases/createへのリンクを追加 -->
+                                <NavLink :href="route('purchases.create')" :active="route().current('purchases.create')">
+                                    購入画面
+                                </NavLink>
                                 <!-- items/indexへのリンクを追加 -->
                                 <NavLink :href="route('items.index')" :active="route().current('items.index')">
                                     商品管理
@@ -122,6 +126,10 @@ const showingNavigationDropdown = ref(false);
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
+                        </ResponsiveNavLink>
+                        <!-- purchases/createへのリンクを追加 -->
+                        <ResponsiveNavLink :href="route('purchases.create')" :active="route().current('purchases.create')">
+                            購入画面
                         </ResponsiveNavLink>
                         <!-- items/indexへのリンクを追加 -->
                         <ResponsiveNavLink :href="route('items.index')" :active="route().current('items.index')">
