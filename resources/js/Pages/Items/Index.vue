@@ -105,15 +105,13 @@ defineProps({
                                                 >
                                                     <span
                                                         v-if="
-                                                            item.is_selling ===
-                                                            1
+                                                            item.is_selling === 1
                                                         "
                                                         >販売中</span
                                                     >
                                                     <span
                                                         v-if="
-                                                            item.is_selling ===
-                                                            0
+                                                            item.is_selling === 0
                                                         "
                                                         >停止中</span
                                                     >

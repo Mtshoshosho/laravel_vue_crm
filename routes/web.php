@@ -9,19 +9,20 @@ use App\Http\Controllers\InertiaTestController;
 // _____CRM Tours開発記述____________________________________________________________________________________
 // itemsテーブルに関するルートの登録
 use App\Http\Controllers\ItemController;
-
 Route::resource('items', ItemController::class)
 ->middleware(['auth', 'verified']);
 
 
 use App\Http\Controllers\CustomerController;
-
 Route::resource('customers', CustomerController::class)
 ->middleware(['auth', 'verified']);
 
 use App\Http\Controllers\PurchaseController;
+Route::resource('purchases', PurchaseController::class)
+->middleware(['auth', 'verified']);;
 
-Route::resource('purchases', PurchaseController::class);
+use App\Http\Controllers\AnalysisController;
+Route::get('analysis', [AnalysisController::class, 'index'])->name('analysis');
 
 // ________________________________________________________________________________________________________
 

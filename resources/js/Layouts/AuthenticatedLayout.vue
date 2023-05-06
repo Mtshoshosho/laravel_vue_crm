@@ -48,6 +48,10 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('customers.index')" :active="route().current('customers.index')">
                                     顧客管理
                                 </NavLink>
+                                <!-- analysisへのリンクを追加 -->
+                                <NavLink :href="route('analysis')" :active="route().current('analysis')">
+                                    データ分析
+                                </NavLink>
                             </div>
                         </div>
 
@@ -146,6 +150,10 @@ const showingNavigationDropdown = ref(false);
                         <!-- customers/indexへのリンクを追加 -->
                         <ResponsiveNavLink :href="route('customers.index')" :active="route().current('customers.index')">
                             顧客管理
+                        </ResponsiveNavLink>
+                        <!-- analysisへのリンクを追加 -->
+                        <ResponsiveNavLink :href="route('analysis')" :active="route().current('analysis')">
+                            データ分析
                         </ResponsiveNavLink>
                     </div>
 

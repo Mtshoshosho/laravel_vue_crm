@@ -5,6 +5,9 @@ import { Head } from "@inertiajs/vue3";
 import { reactive } from "vue";
 import { Inertia } from "@inertiajs/inertia";
 import BreezeValidationErrors from "@/Components/ValidationErrors.vue";
+import { defineProps } from "vue";
+import { Core as YubinBangoCore } from "yubinbango-core2";
+
 
 // controllerから渡ってくる情報はdefinePropsで受け取る
 const props = defineProps({
@@ -28,6 +31,12 @@ const form = reactive({
 
 const updateCustomer = (id) => {
     Inertia.put(route("customers.update", { customer: id }), form);
+};
+
+const fetchAddress = () => {
+    new YubinBangoCore(String(form.postcode), (value) => {
+        form.address = value.region + value.locality + value.street;
+    });
 };
 </script>
 
